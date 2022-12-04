@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie-List</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body>
+    <div class="container">
+        <div id="search" class="search">
+            <form>
+                <input type="text" id="search-input" class="search-input" placeholder="Bulmak istediğiniz filmin adını yazınız">
+                <span id="search-icon" class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass glass"></i>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </span>
+            </form>
+        </div>
+
+        <div id="result-list" class="movies">
+        </div>
+
+        <div id="result-footer" class="result-footer text-center"><a href="#" id="show-more" class="link">DAHA FAZLA SONUÇ »</a></div>
+    </div>
+
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

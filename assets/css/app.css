@@ -1,6 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
 body {
-  background-color: aqua;
-  color: bisque;
-  font-size: large;
-  align-self: start;
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+body {
+  background-color: rgb(190, 219, 222);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.search {
+  width: 50%;
+}
+.search form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.search form .search-input {
+  width: 100%;
+  height: 55px;
+  padding-right: 4rem;
+  padding-left: 2rem;
+  border: 0;
+  border-radius: 1rem;
+}
+.search form .search-input:active, .search form .search-input:focus {
+  border: 0;
+}
+.search form .search-icon {
+  position: absolute;
+  right: 20px;
+  font-size: 2rem;
+  color: blue;
+  cursor: pointer;
+}
+
+.movies {
+  padding: 0 5rem;
+  display: flex;
+  background-color: white;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+  margin-top: 1rem;
+}
+.movies .card {
+  max-width: 50%;
+  display: flex;
+  margin: 3rem 5rem 3rem 0;
+}
+.movies .card .text-box {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.movies .card .text-box .title {
+  font-weight: 600;
+}
+.movies .card .text-box .rating {
+  display: flex;
+  align-items: end;
+}
+.movies .card .text-box .rating .active {
+  color: blue;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+.movies .card .text-box .rating .active i {
+  font-size: 0.8rem;
+  margin-right: 0.3rem;
+}
+.movies .card .text-box .rating span {
+  display: inline-block;
+  font-size: 0.8rem;
+}
+.movies .card .text-box .info {
+  margin-bottom: 3rem;
+}
+
+.result-footer {
+  margin-bottom: 1rem;
+  background-color: white;
+  border-bottom-left-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+  padding: 2rem 0;
+  border-top: 1px solid gray;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.link {
+  color: blue;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .search {
+    width: 75%;
+  }
+  .movies {
+    padding: 0 2rem;
+    flex-direction: column;
+  }
+  .movies .card {
+    max-width: 100%;
+    margin: 3rem 0 3rem 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .movies .card .text-box {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+  .movies .card .text-box .info {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
 }
